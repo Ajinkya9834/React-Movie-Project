@@ -9,6 +9,7 @@ A modern movie browsing web application built using React that allows users to e
 - 🎥 View movie details (overview, rating, release date)  
 - ▶ Watch trailers (YouTube integration)  
 - 📊 Movie facts (budget, revenue, language, etc.)  
+- 🔍 Search movies title feature.
 - 🎨 Clean and responsive UI using Tailwind CSS  
 
 ---
@@ -28,7 +29,7 @@ A modern movie browsing web application built using React that allows users to e
 - Movie Details → `/movie/{id}`  
 - Trailers → `/movie/{id}/videos`  
 - Cast → `/movie/{id}/credits`  
-
+- Search → `/3/search/movie?query={search-term}`
 ---
 
 ## 📸 Screenshots
@@ -40,3 +41,5 @@ A modern movie browsing web application built using React that allows users to e
 ![Mobiel Home page](./public/mobile-view-home.png)
 
 ![Mobile Single movie page](public/mobile-view-single-page.png)
+
+![Login page](public/login-page.png)
