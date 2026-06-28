@@ -26,7 +26,7 @@ function Hero() {
     return (
         <>
             <section
-                className="bg-center pt-[55px] md:pt-[72px] bg-amber-400 bg-no-repeat"
+                className="bg-center pt-[55px] md:pt-[72px] bg-no-repeat"
                 style={{ backgroundImage: `url(${HeroImg})`, backgroundSize: "cover" }}
             >
                 <div className="max-w-7xl mx-auto p-5 md:py-[60px]">
