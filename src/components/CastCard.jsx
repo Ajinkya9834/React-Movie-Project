@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 function CastCard(props) {
 
     const [MovieCasts, setMovieCasts] = useState([]);
-    console.log(MovieCasts);
     const id = props.id;
 
     useEffect(() => {
@@ -12,7 +11,7 @@ function CastCard(props) {
 
     async function getCastOfMovie() {
         try {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=0740d693f0240a102ea253d01f68909c`)
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${import.meta.env.VITE_TMDB_API_KEY}`)
             const data = await res.json();
 
             setMovieCasts(data.cast.slice(0, 10));

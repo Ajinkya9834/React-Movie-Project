@@ -11,7 +11,6 @@ import PopularMovies from "./PopularMovies";
 function MovieDetails() {
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
-    console.log(movie);
 
     useEffect(() => {
         getMovieDetails();
@@ -20,7 +19,7 @@ function MovieDetails() {
     async function getMovieDetails() {
         try {
             const res = await fetch(
-                `https://api.themoviedb.org/3/movie/${id}?api_key=0740d693f0240a102ea253d01f68909c`
+                `https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_TMDB_API_KEY}`
             );
 
             const data = await res.json();

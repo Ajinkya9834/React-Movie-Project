@@ -14,7 +14,7 @@ function LatestTrailers() {
         try {
             // 1. Get now playing movies
             const res = await fetch(
-                `https://api.themoviedb.org/3/movie/now_playing?api_key=0740d693f0240a102ea253d01f68909c`
+                `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_API_KEY}`
             );
             const data = await res.json();
 
@@ -24,7 +24,7 @@ function LatestTrailers() {
             // 3. Fetch trailers for each movie
             const trailerPromises = movies.map(async (movie) => {
                 const videoRes = await fetch(
-                    `https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=0740d693f0240a102ea253d01f68909c`
+                    `https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${import.meta.env.VITE_TMDB_API_KEY}`
                 );
                 const videoData = await videoRes.json();
 

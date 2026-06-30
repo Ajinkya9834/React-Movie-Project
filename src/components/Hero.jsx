@@ -6,11 +6,9 @@ function Hero() {
     const [searchedMovieName, setSearchedMovieName] = useState([]);
     const [searchedInput, setSearchedInput] = useState("");
     // const [userSearchedMovie, setUserSearchedMovie] = useState(false); 
-    console.log(searchedMovieName);
 
     async function handleSearchClick() {
-        console.log("clicked");
-        const res = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchedInput}&api_key=0740d693f0240a102ea253d01f68909c`);
+        const res = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchedInput}&api_key=${import.meta.env.VITE_TMDB_API_KEY}`);
         const data = await res.json();
         setSearchedMovieName(data.results);
     }

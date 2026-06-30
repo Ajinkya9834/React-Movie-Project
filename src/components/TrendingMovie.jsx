@@ -10,7 +10,7 @@ function Trending() {
 
     async function getMovies() {
         try {
-            const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=0740d693f0240a102ea253d01f68909c`);
+            const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_TMDB_API_KEY}`);
             const data = await response.json();            
             setMovies(data.results)
         } catch (error) {
